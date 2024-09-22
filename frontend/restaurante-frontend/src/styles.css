@@ -1,0 +1,80 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #1b1b1b, #743333);
+  color: #333;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.platos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.plato {
+  background-color: #f7f6bc;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plato:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.plato h2 {
+  margin: 10px 0;
+  font-size: 1.6em;
+  transition: color 0.3s;
+  color: #d92d2c; /* Rojo */
+}
+
+.plato p {
+  color: #666;
+  transition: color 0.3s;
+}
+
+.plato:hover h2 {
+  color: #227734; /* Verde */
+}
+
+.plato:hover p {
+  color: #333;
+}
+
+/* Colores de la bandera italiana en el fondo del menú */
+.menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    #3cbf4e 33%,
+    #ffffff 33%,
+    #ffffff 66%,
+    #d92d2c 66%
+  );
+  z-index: -1;
+  border-radius: 10px;
+}
